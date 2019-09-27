@@ -71,6 +71,7 @@ listed below. This will create executable file `shellinaboxd` in project directo
    ```
     ./configure && make
    ```
+If a build error is encountered, see **Known Issues** below.
 
 #### Debian package
 
@@ -119,3 +120,5 @@ Known Issues
   utilities necessary for Shell-in-a-box to generate self-signed
   certificates.  Upgrade openssl to install a version of the tools
   that support certificate creation.
+  
+* A number of issues from numerous sources have been reported in the base https://github.com/shellinabox/shellinabox repo     around build failure i.e. `undefined reference to SSL_CTX_set_options`. One possible solution is to install libssl1.0-dev:   sudo apt-get install libssl1.0-dev
